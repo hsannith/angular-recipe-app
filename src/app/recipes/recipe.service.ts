@@ -24,6 +24,10 @@ export class RecipeService{
           return this.recipes.slice();
       }
 
+      getRecipe(id:number){
+        return this.recipes[id];
+      }
+
       selectedRecipe=new EventEmitter<Recipe>();
 
       constructor(private shoppingservice:ShoppingListService){
