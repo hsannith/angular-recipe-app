@@ -23,6 +23,11 @@ export class RecipeService{
         new Ingredient('masala',10)])   
       ];
 
+
+      setRecipes(rcp:Recipe[]){
+        this.recipes=rcp;
+        this.recipeschanged.next(this.recipes.slice());
+      }
       getRecipes(){
           return this.recipes.slice();
       }
